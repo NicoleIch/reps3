@@ -54,29 +54,7 @@
 			<br><br>
 			Fläche des Rechtecks: &nbsp &nbsp <input type="text" id="flaeche" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisFlR ?>"  name="flaecheR" >			
 			</form>
-			<?php
-			$umfang ="";
-			$flaeche ="";
-			if(isset($_POST["berechne"]))
-			{
-				
-				$umfang = 2*$_POST["l1"] + 2*$_POST["l2"];
-				$flaeche = $_POST["l1"] * $_POST["l2"];
-			}
-		?>
 			
-			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-			<p class='grossblau'>Rechtecksberechnung:</p>
-		<br><br>
-			Kantenlänge 1 in cm: &nbsp <input type="text" style="background-color:#E4EDDF" value="" name="l1" autocomplete="off" required>
-			<br><br>
-			Kantenlänge 2 in cm: &nbsp <input type="text" style="background-color:#E4EDDF" value="" name="l2" autocomplete="off" required>
-			<input type="submit" name="berechne" value="Berechnen">
-			<br><br>
-			Umfang: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $umfang ?>"  name="umfang" >
-			<br><br>
-			Fläche: &nbsp &nbsp <input type="text" id="flaeche" size=10 style="background-color:#E4EDDF" value="<?php echo $flaeche ?>"  name="flaeche" >
-		</form>
 		
 		
 	</body>
