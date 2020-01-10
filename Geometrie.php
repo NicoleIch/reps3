@@ -27,12 +27,13 @@
 		?>
 			
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-		</form>
+		
 			Radius in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="radius" autocomplete="off" required>
 			<input type="submit" name="berechnen" value="Berechnen">
 			<br><br><br>
 			Umfang: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisUmf ?>"  name="umfang" >
 			<br><br>
 			Fläche: &nbsp &nbsp <input type="text" id="flaeche" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisFl ?>"  name="flaeche" >
+			</form>
 	</body>
 </html>
