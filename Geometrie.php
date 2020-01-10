@@ -20,7 +20,10 @@
 			$_ErgebnisUmfK = "";
 			$_ErgebnisFlK = "";
 			$_ErgebnisUmfR = "";
-			$_ErgebnisFlR = "";			
+			$_ErgebnisFlR = "";		
+			$_ErgebnisUmfD = "";
+			$_ErgebnisFlD = "";
+			
 			if(isset($_POST["berechnenKreis"]))
 			{
 				$_ErgebnisUmfK = number_format(2*$_POST["radius"]*pi(),2)." cm";
@@ -30,7 +33,12 @@
 			{
 				$_ErgebnisUmfR = number_format(2*$_POST["l1"]+2*$_POST["l2"],2)." cm";
 				$_ErgebnisFlR = number_format($_POST["l1"]*$_POST["l2"],2). " cm²";
-			}			
+			}		
+			if(isset($_POST["berechnenDreieck"]))
+			{
+				$_ErgebnisUmfD = number_format($_POST["W1"]+$_POST["W2"]+$_POST["W3"],2)." cm";
+				$_ErgebnisFlD = number_format (sqrt(($_POST["W1"]+$_POST["W2"]+$_POST["W3"])*($_POST["W1"]+$_POST["W2"]-$_POST["W3"])*($_POST["W1"]*-1+$_POST["W2"]+$_POST["W3"])*($_POST["W1"]-$_POST["W2"]+$_POST["W3"]))/4,2). " cm²";
+			}		
 		?>
 			
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -53,6 +61,21 @@
 			Umfang des Rechtecks: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisUmfR ?>"  name="umfangR" >
 			<br><br>
 			Fläche des Rechtecks: &nbsp &nbsp <input type="text" id="flaeche" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisFlR ?>"  name="flaecheR" >			
+
+			
+			<p class='grossblau'> Dreiecksberechnung:</p>
+		<br><br>			
+			Kantenlänge1 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W1" autocomplete="off">
+			<br><br>
+			Kantenlänge2 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W2" autocomplete="off">
+			<br><br>
+			Kantenlänge3 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W3" autocomplete="off">
+			<input type="submit" name="berechnenDreieck" value="Berechnung">
+			<br><br>		
+			
+			Umfang des Dreiecks: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisUmfD ?>"  name="umfangD" >
+			<br><br>
+			Fläche des Dreiecks: &nbsp &nbsp <input type="text" id="flaeche" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisFlD ?>"  name="flaecheD" >			
 			</form>
 			
 		
