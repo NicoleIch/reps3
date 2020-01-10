@@ -43,7 +43,7 @@
 			
 		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 		
-			Radius in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="radius" autocomplete="off">
+			Radius in cm: &nbsp <input type="text" required id="radius" style="background-color:#E4EDDF" value="0" name="radius" autocomplete="off">
 			<input type="submit" name="berechnenKreis" value="Berechnen">
 			<br><br><br>
 			Kreisumfang: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisUmfK ?>"  name="umfangK" >
@@ -53,9 +53,9 @@
 			
 		<p class='grossblau'> Rechteckberechnung:</p>
 		<br><br>			
-			Kantenlänge1 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="l1" autocomplete="off">
+			Kantenlänge1 in cm: &nbsp <input type="text" required style="background-color:#E4EDDF" value="0" name="l1" autocomplete="off">
 			<br><br>
-			Kantenlänge2 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="l2" autocomplete="off">
+			Kantenlänge2 in cm: &nbsp <input type="text" required style="background-color:#E4EDDF" value="0" name="l2" autocomplete="off">
 			<input type="submit" name="berechnenRechteck" value="Berechnen">
 			<br><br>			
 			Umfang des Rechtecks: &nbsp <input type="text" id="umfang" size=10 style="background-color:#E4EDDF" value="<?php echo $_ErgebnisUmfR ?>"  name="umfangR" >
@@ -65,11 +65,11 @@
 			
 			<p class='grossblau'> Dreiecksberechnung:</p>
 		<br><br>			
-			Kantenlänge1 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W1" autocomplete="off">
+			Kantenlänge1 in cm: &nbsp <input type="text" required style="background-color:#E4EDDF" value="0" name="W1" autocomplete="off">
 			<br><br>
-			Kantenlänge2 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W2" autocomplete="off">
+			Kantenlänge2 in cm: &nbsp <input type="text" required style="background-color:#E4EDDF" value="0" name="W2" autocomplete="off">
 			<br><br>
-			Kantenlänge3 in cm: &nbsp <input type="text" id="radius" style="background-color:#E4EDDF" value="" name="W3" autocomplete="off">
+			Kantenlänge3 in cm: &nbsp <input type="text" required style="background-color:#E4EDDF" value="0" name="W3" autocomplete="off">
 			<input type="submit" name="berechnenDreieck" value="Berechnung">
 			<br><br>		
 			
